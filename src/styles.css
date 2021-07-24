@@ -1,0 +1,57 @@
+:root {
+  --theme: #52fc12;
+  --btn: #0051ff;
+}
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.App {
+  width: 100%;
+  max-width: 450px;
+  min-width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: var(--theme);
+  padding: 30px;
+}
+h2 {
+  padding-top: 30px;
+}
+
+.birthDateDiv {
+  margin: 45px;
+}
+
+p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input {
+  display: inline-block;
+  /* padding: 20px;  */
+  height: 2.4rem;
+  width: 16rem;
+}
+
+button {
+  background-color: var(--btn);
+  color: white;
+  font-size: 1rem;
+  margin: 30px;
+  height: 42px;
+  width: 92px;
+  border-radius: 20px;
+  text-decoration: none;
+  /* border: none; */
+}
+button:hover {
+  transition: 0.3s;
+  background-color: white;
+  color: var(--btn);
+  height: 44px;
+  width: 94px;
+}
