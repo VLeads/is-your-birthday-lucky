@@ -55,3 +55,9 @@ button:hover {
   height: 44px;
   width: 94px;
 }
+
+#notice {
+  margin: 1rem auto 0;
+  display: flex;
+  justify-content: center;
+}
