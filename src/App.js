@@ -1,7 +1,15 @@
 import "./styles.css";
 import { useState } from "react";
-import sad from "./sad.jpg";
-import smiley from "./smiley.jpg";
+import sad from "./sad.png";
+import smiley from "./smiley.png";
+import baloons from "./baloons.png";
+import micky from "./micky.png";
+import {
+  AiOutlineGithub,
+  AiFillTwitterCircle,
+  AiFillLinkedin
+} from "react-icons/ai";
+import { FaBriefcase } from "react-icons/fa";
 
 function App() {
   // privacy notice
@@ -12,11 +20,9 @@ function App() {
   let dateInput = "";
   let luckyNum = 0;
 
-  const lucky = <img src={smiley} alt="Wow" width="100%" height="200px" />;
+  const lucky = <img src={smiley} alt="Wow" width="80%" height="200px" />;
 
-  const notLucky = (
-    <img src={sad} alt="not lucky" width="100%" height="200px" />
-  );
+  const notLucky = <img src={sad} alt="not lucky" width="80%" height="200px" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,18 +43,31 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      // style={{
+      //   backgroundImage: `url(${micky})`
+      // }}
+    >
+      {/* <img id="micky" src={micky} alt="decoration" /> */}
       <div
         style={{
-          backgroundImage: `url`
+          backgroundImage: `url("${baloons}")`,
+          backgroundSize: "cover",
+          // backgroundImage: `url("${micky}")`,
+          minHeight: "88.5vh",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed"
         }}
       >
+        <p className="heading">Is your Birthday Lucky?</p>
         <div id="notice" style={{ display: `${notice}` }}>
           <div>
             <strong>We respect privacy! </strong> We are not storing your data.
           </div>
 
-          <span
+          <div
             id="cancel"
             onClick={() => {
               setNotice("none");
@@ -56,17 +75,17 @@ function App() {
             style={{
               paddingLeft: "0rem",
               cursor: "pointer",
-              fontSize: "1rem"
+              fontSize: "0.8rem"
             }}
           >
-            x
-          </span>
+            <span>&#10060;</span>
+          </div>
         </div>
         <div>
-          <h2>Enter your birthdate and lucky number to continue...</h2>
+          <h2>Enter your birthdate and lucky number to checkout...</h2>
           <form onSubmit={handleSubmit}>
             <div className="birthDateDiv">
-              <p>Select your Birth date:</p>
+              <p className="label">Select your Birth date:</p>
               <input
                 onChange={(e) => {
                   dateInput = e.target.value;
@@ -77,7 +96,7 @@ function App() {
             </div>
 
             <div className="luckyNumDiv">
-              <p>Enter your Lucky Number:</p>
+              <p className="label">Enter your Lucky Number:</p>
               <input
                 id="luckyNum"
                 onChange={(e) => {
@@ -96,6 +115,44 @@ function App() {
           {result[1]}
         </div>
       </div>
+      <footer>
+        <div className="footerDiv">-Connect with me on-</div>
+        <ul>
+          <li>
+            <a className="footerLink" href="https://github.com/VLeads/">
+              <AiOutlineGithub />
+            </a>
+          </li>
+          <li>
+            <a className="footerLink" href="https://twitter.com/Vishalk01234">
+              <AiFillTwitterCircle />
+            </a>
+          </li>
+          <li>
+            <a
+              className="footerLink"
+              href="https://www.linkedin.com/in/vishalkumar28/"
+            >
+              <AiFillLinkedin />
+            </a>
+          </li>
+          <li>
+            <a className="footerLink" href="https://vishalkumar.netlify.app/">
+              <FaBriefcase />
+            </a>
+          </li>
+        </ul>
+        <div class="copyright">
+          &copy; Vishal Kumar 2021 |{" "}
+          <a
+            href="#notice"
+            style={{ color: "black", marginTop: "0" }}
+            onClick={() => setNotice("flex")}
+          >
+            Privacy Policy
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

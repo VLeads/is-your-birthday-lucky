@@ -1,13 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap");
 :root {
-  --theme: #6f00ff;
-  --secondary: #1974c9;
-  /* --secondary: #7c25ee; */
+  /* --theme: #6f00ff; */
+  --theme: #2f00ff;
+  /* --secondary: #27be8c; */
+  --secondary: #6f00ff;
   --btn: #5bdf2b;
 }
 
 * {
-  font-family: sans-serif;
+  font-family: "Dancing Script", cursive;
+  font-family: "Satisfy", cursive;
   margin: 0;
+  /* color: white; */
 }
 
 .App {
@@ -30,6 +34,7 @@ h2 {
 p {
   margin-bottom: 10px;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 input {
@@ -58,19 +63,71 @@ button:hover {
   width: 94px;
 }
 
+.heading {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 4px 4px black;
+}
+
 #notice {
   margin: 1rem auto 0;
   display: flex;
   justify-content: center;
-  color: #00f583;
+  color: #f1f50c;
   /* color: #e0ee17; */
   /* border: 1px solid blue; */
   background-color: var(--secondary);
   padding: 0.5rem 1rem;
-  box-shadow: 0px 0px 5px 2px #46039e;
+  box-shadow: 0px 0px 5px 2px white;
+  /* box-shadow: 0px 0px 5px 2px #46039e; */
 }
 
 #cancel {
   color: #610909;
   margin-left: 2rem;
+}
+
+.label {
+  text-shadow: 1px 1px #0facdb;
+}
+
+/* #micky {
+  position: fixed;
+} */
+
+footer {
+  background: var(--secondary);
+  box-shadow: 0px 0px 10px 2px white;
+  /* height: 3rem; */
+  /* padding: 5px; */
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-inline-start: 0px;
+
+  /* margin: auto; */
+}
+li {
+  /* border: 1px solid red; */
+  padding: 0.7rem 1rem 0;
+  list-style: none;
+  font-size: 1.6rem;
+}
+.footerLink {
+  display: inline-block;
+  /* padding: 0.1rem; */
+  text-decoration: none;
+  color: #e7e2e2;
+}
+
+.footerDiv {
+  color: #000000;
+}
+.copyright {
+  color: #000000;
 }
