@@ -1,6 +1,8 @@
 :root {
-  --theme: #52fc12;
-  --btn: #0051ff;
+  --theme: #6f00ff;
+  --secondary: #1974c9;
+  /* --secondary: #7c25ee; */
+  --btn: #5bdf2b;
 }
 
 * {
@@ -60,4 +62,15 @@ button:hover {
   margin: 1rem auto 0;
   display: flex;
   justify-content: center;
+  color: #00f583;
+  /* color: #e0ee17; */
+  /* border: 1px solid blue; */
+  background-color: var(--secondary);
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 0px 5px 2px #46039e;
+}
+
+#cancel {
+  color: #610909;
+  margin-left: 2rem;
 }

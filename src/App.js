@@ -38,55 +38,63 @@ function App() {
 
   return (
     <div className="App">
-      <div id="notice">
-        <div style={{ display: `${notice}` }}>
-          <strong>We respect privacy! </strong> We are not storing your data.
-        </div>
-        <div
-          onClick={() => {
-            setNotice("none");
-          }}
-          style={{
-            paddingLeft: "0rem",
-            cursor: "pointer",
-            fontSize: "1rem"
-          }}
-        >
-          <span>x</span>
-        </div>
-      </div>
-      <div>
-        <h2>Enter your birthdate and lucky number to continue...</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="birthDateDiv">
-            <p>Select your Birth date:</p>
-            <input
-              onChange={(e) => {
-                dateInput = e.target.value;
-              }}
-              type="date"
-              required
-            />
+      <div
+        style={{
+          backgroundImage: `url`
+        }}
+      >
+        <div id="notice" style={{ display: `${notice}` }}>
+          <div>
+            <strong>We respect privacy! </strong> We are not storing your data.
           </div>
 
-          <div className="luckyNumDiv">
-            <p>Enter your Lucky Number:</p>
-            <input
-              id="luckyNum"
-              onChange={(e) => {
-                luckyNum = e.target.value;
-              }}
-              type="number"
-              required
-            />
-          </div>
-          <button type="submit">check</button>
-        </form>
-      </div>
+          <span
+            id="cancel"
+            onClick={() => {
+              setNotice("none");
+            }}
+            style={{
+              paddingLeft: "0rem",
+              cursor: "pointer",
+              fontSize: "1rem"
+            }}
+          >
+            x
+          </span>
+        </div>
+        <div>
+          <h2>Enter your birthdate and lucky number to continue...</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="birthDateDiv">
+              <p>Select your Birth date:</p>
+              <input
+                onChange={(e) => {
+                  dateInput = e.target.value;
+                }}
+                type="date"
+                required
+              />
+            </div>
 
-      <div className="result">
-        <label>{result[0]}</label>
-        {result[1]}
+            <div className="luckyNumDiv">
+              <p>Enter your Lucky Number:</p>
+              <input
+                id="luckyNum"
+                onChange={(e) => {
+                  luckyNum = e.target.value;
+                }}
+                type="number"
+                required
+              />
+            </div>
+            <button type="submit">check</button>
+          </form>
+        </div>
+
+        <div className="result">
+          <label>{result[0]}</label>
+          {result[1]}
+        </div>
       </div>
     </div>
   );
